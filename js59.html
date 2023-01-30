@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+
+    </script>
+    <style>
+      span {
+        background-color: yellow;
+        padding: 5px;
+        margin: 5px;
+      }
+    </style>
+</head>
+<body>
+    <p></p>
+    <script>
+      let tekst="JavaScript jest językiem programowania od zawsze związanym z tworzeniem aplikacji WWW."
+
+      let slowa=tekst.split(" ");
+      console.log(slowa);
+
+
+      document.querySelector("p").innerHTML=slowa.map(slowo => {return "<span>"+slowo+"</span>"}).join(" ");
+    </script>
+</body>
+</html>

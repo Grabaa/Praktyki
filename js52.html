@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-164158408-1');
+    </script>
+</head>
+<body>
+    <script>
+      const body=document.querySelector('body');
+      let osoby=["Jan Nowak","Kazimierz Zyga","Stefan Koc","Ewa Mocek","Mariusz Abramski"]
+
+      console.log(Array.isArray(osoby));
+      (Array.isArray(osoby)) ? body.innerHTML ="osoby to tablica" : body.innerHTML ="osoby to nie tablica";
+    </script>
+</body>
+</html>

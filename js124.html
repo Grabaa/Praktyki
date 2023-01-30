@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    </script>
+</head>
+<body>
+    <h3>Wpisz swój komunikat (max. 200 znaków) </h3>
+    <textarea cols="70" rows="3" id="customInput" placeholder="Wpisz tutaj swój tekst!"></textarea>
+    <div id="licznik"></div>
+
+    <script>
+        const textarea = document.querySelector("textarea");
+        const licznik = document.querySelector("#licznik");
+
+        textarea.addEventListener("keydown", function () {
+            licznik.innerHTML = 'wpisałeś: ' + textarea.value.length + ' zostało Ci: ' + (200-textarea.value.length) + ' znaków.';
+        });
+    </script>
+</body>
+</html>

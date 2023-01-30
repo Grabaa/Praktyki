@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+
+    </script>
+    <style>
+        td {
+            border:1px solid black;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Zawartość tablicy "imiona"</h1>
+    <div id="tablicaDane"></div>
+    <script>
+
+		const tablicaDane=document.querySelector('#tablicaDane')
+        const imiona = ['Zenek','Tomasz','Adam','Ewa','Krzysztof'];
+
+        let kodhtml='<table>';
+        imiona.forEach(function(element,indeks) {
+            kodhtml+='<tr>';
+            kodhtml+='<td>'+indeks+'</td>';
+            kodhtml+='<td>'+element+'</td>';
+            kodhtml+='</tr>';
+        });
+        kodhtml+='<table>';
+
+        tablicaDane.innerHTML=kodhtml;
+    </script>
+</body>
+</html>

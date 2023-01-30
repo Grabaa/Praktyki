@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+
+    </script>
+    <style>
+	    html, body {
+			width:100%;
+			height:100%;
+			margin:0;
+			padding:0;
+		}
+        div {
+            font-size:40px;
+			background-color: lightgray;
+			width:100%;
+			height:30%;
+			text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <div>Najedź myszką - kręć "kołem" myszki, zmieniaj rozmiar.</div>
+
+    <script>
+        const el = document.querySelector('div');
+
+
+        let rozmiarCzcionki = 40;
+        el.style.fontSize = rozmiarCzcionki + "px";
+
+
+
+        el.addEventListener("wheel",function(event) {
+
+            event.preventDefault();
+
+            console.log(event.deltaY);
+
+            if(event.deltaY>0)
+                el.style.fontSize = (rozmiarCzcionki++) + 'px'
+            else
+                el.style.fontSize = (rozmiarCzcionki--) + 'px'
+        })
+    </script>
+</body>
+</html>

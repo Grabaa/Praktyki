@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+
+    </script>
+</head>
+<body>
+
+    <script>
+      const body=document.querySelector('body');
+
+      let osoby=["Jan Nowak","Kazimierz Zyga","Stefan Koc","Ewa Mocek","Mariusz Abramski"];
+
+
+      body.innerHTML=osoby.map(osoba=>{return "<h3>"+osoba.substr(osoba.indexOf(" ")+1)+"</h3>"; }).sort().join(" ");
+
+    </script>
+
+</body>
+</html>

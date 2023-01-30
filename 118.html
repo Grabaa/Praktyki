@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+
+    </script>
+
+</head>
+<body>
+    <div id="przyciski">
+        <button name="przycisk1" value="100">przycisk 1</button>
+        <button name="przycisk2" value="200">przycisk 2</button>
+        <button name="przycisk3" value="300">przycisk 3</button>
+        <button name="przycisk4" value="400">przycisk 4</button>
+        <button name="przycisk5" value="500">przycisk 5</button>
+    </div>
+    <span></span>
+
+    <script>
+        const przyciski = document.querySelector('#przyciski');
+        const span = document.querySelector('span');
+
+
+        przyciski.addEventListener("click",(e) => {
+            span.innerHTML = 'Nazwa: ' + e.target.name + ' wartość: ' + e.target.value;
+        })
+
+    </script>
+</body>
+</html>

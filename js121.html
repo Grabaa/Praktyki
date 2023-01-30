@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    </script>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        najedź, zjedź
+    </div>
+    <span>...</span>
+    <script>
+        const span = document.querySelector('span');
+        const div = document.querySelector('div');
+
+
+        div.addEventListener("mouseover",function(){
+            span.innerHTML = "najechałeś";
+        })
+
+
+        div.addEventListener("mouseout",function(){
+            span.innerHTML = "zjechałeś";
+        })
+    </script>
+</body>
+</html>

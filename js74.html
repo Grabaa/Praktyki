@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+
+    </script>
+</head>
+<body>
+    <div id="informacja"></div>
+    <script>
+        const informacja=document.querySelector('#informacja');
+        let kod='';
+        let liczba;
+        for(let i=1;i<=6;i++)
+        {
+            liczba=Math.ceil(Math.random()*49);
+            kod+=liczba+', ';
+        }
+        informacja.innerHTML=kod
+    </script>
+</body>
+</html>

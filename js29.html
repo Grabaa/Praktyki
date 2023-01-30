@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+
+    </script>
+</head>
+
+<body>
+    <input type="radio" name="rozmiar" value="200"> 200
+    <input type="radio" name="rozmiar" value="300"> 300
+    <input type="radio" name="rozmiar" value="500"> 500
+    <div></div>
+    <div id="opis"></div>
+    <script>
+
+        const div=document.querySelector('div');
+		const elementyRadio=document.querySelectorAll('input');
+		for(const radio of elementyRadio) {
+			radio.addEventListener("click",function() {
+				div.innerHTML=radio.value
+			});
+		}
+    </script>
+</body>
+</html>

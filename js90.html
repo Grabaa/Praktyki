@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+
+    </script>
+</head>
+<body>
+    <div id="wynik"></div>
+    <script>
+
+        let pb95=4;
+
+        const Oferta = {
+            marka  : "Kia",
+            model : "Carens",
+            cena : 60000,
+            spalanie: 8,
+            rocznik: 2019,
+            koszt100km : function() {
+                let koszt = this.spalanie * pb95;
+                return koszt;
+            },
+            wiekSamochodu : function() {
+                let data=new Date()
+                let wiek=Number(data.getFullYear())-this.rocznik;
+                if(wiek==1) { wiek=wiek+' rok'; }
+                else if (wiek>1 && wiek <5) { wiek=wiek+' lata'; }
+                else { wiek=wiek+' lat'; }
+                return wiek;
+            }
+
+        }
+
+        console.log(Oferta.marka+' '+Oferta.model)
+        console.log('Koszt 100 km to: ' +Oferta.koszt100km()+' zł ');
+        console.log('Wiek pojazdu: ' + Oferta.wiekSamochodu());
+    </script>
+</body>
+</html>

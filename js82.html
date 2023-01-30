@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+
+    </script>
+</head>
+<body>
+    <button id="przycisk">Wstaw tekst</button>
+    <div id="informacja"></div>
+    <script>
+
+        const przycisk=document.querySelector('#przycisk');
+        const informacja=document.querySelector('#informacja');
+
+        przycisk.addEventListener('click', function() {
+            informacja.innerHTML="Funkcja anonimowa"
+        })
+    </script>
+</body>
+</html>

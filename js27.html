@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+    <input type="number" id="a"> +
+    <input type="number" id="b">
+    <button id="dodaj">=</button>
+    <span id="wynik"></span>
+    <script>
+
+        const a=document.querySelector('#a');
+        const b=document.querySelector('#b');
+		const dodaj=document.querySelector('#dodaj');
+		const liczba=document.querySelector('#liczba');
+
+		dodaj.addEventListener("click", function(){
+            let suma=Number(a.value)+Number(b.value);
+			wynik.innerHTML='<b>'+suma+'</b>';
+		});
+    </script>
+</body>
+</html>

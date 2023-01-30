@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+
+    </script>
+    <style>
+        td {
+            border:1px solid black;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="dane"></div>
+    <script>
+
+
+        const dane=document.querySelector('#dane');
+
+        let text='<table>';
+        for(let i=0;i<10;i++){
+            text+='<tr><td>'+i+'</td><td>'+(i*i)+'</td></tr>';
+        }
+        text+='</table>';
+
+        dane.innerHTML=text;
+    </script>
+</body>
+</html>

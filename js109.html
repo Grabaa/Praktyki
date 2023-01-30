@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+
+    <script>
+        const danie1 = {
+            nazwa: "Burger WWW XL",
+            opis:"Burger wieprzowy, ser, ogórek, pomidor, cebula, sałata, sos mieszany",
+            cena: 23,
+            kalorie: 980,
+            grafika: "burgerwwwxl.jpg",
+            dodatki: {
+                frytki:['frytki ziemniaczane','100g',1,100,"frytki100.jpg"],
+                cola:['cola z lodem','200ml',2,130,"cola200.jpg"],
+                kawa:['kawa na wynos','300ml',3,120,"kawa300.jpg"],
+                salatka:['sałatka grecka','200g',5,220,"salatkagrecka.jpg"],
+            }
+        }
+
+        for(skladniki of Object.keys(danie1))
+        {
+            let wartoscklucza=danie1[skladniki];
+            if(typeof(danie1[skladniki])=='object')
+            {
+                wartoscklucza='';
+                for(dodatek of Object.keys(danie1[skladniki]))
+                {
+                    wartoscklucza+=dodatek+', ';
+                }
+            }
+            console.log(skladniki+' : '+wartoscklucza+' ');
+        }
+
+
+    </script>
+
+</body>
+</html>

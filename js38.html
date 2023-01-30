@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+
+	</style>
+</head>
+<body>
+	<h1 id="wynik">kliknij na wyraz ...</h1>
+	<span style="color:red">czerwony</span>
+	<span style="color:green">zielony</span>
+	<span style="color:blue">niebieski</span>
+
+    <script>
+
+		const wynik=document.querySelector('#wynik');
+
+		const elementySpan=document.querySelectorAll('span');
+		for(const span of elementySpan) {
+			span.addEventListener("click",function() {
+				wynik.innerHTML='wyraz ma kolor: ' + this.style.color;
+			});
+		}
+    </script>
+</body>
+</html>

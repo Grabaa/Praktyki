@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+
+    </script>
+</head>
+
+<body>
+	<input type="number" id="liczba">
+    <button id="pokaz">Pokaż</button>
+    <div id="wynik"></div>
+    <script>
+
+        const wynik=document.querySelector('#wynik');
+		const pokaz=document.querySelector('#pokaz');
+		const liczba=document.querySelector('#liczba');
+
+		pokaz.addEventListener("click", function(){
+			wynik.innerHTML='<h1>'+liczba.value+'</h1>';
+            console.log(typeof liczba.value);
+		});
+    </script>
+</body>
+</html>

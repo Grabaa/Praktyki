@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    </script>
+</head>
+<body>
+    <label for="imie">Podaj imię:</label>
+    <input type="text" id="imie" name="imie">
+    <span id="imieopis"></span>
+
+
+    <script>
+        const imie = document.querySelector('#imie');
+        const imieopis = document.querySelector('#imieopis');
+
+
+        imie.addEventListener("focus",function(){
+            imieopis.innerHTML = "Wpisz swoje imię, pierwsza litera duża, pozostałe małe.";
+        });
+
+
+        imie.addEventListener("blur",function(){
+            imieopis.innerHTML = "";
+        });
+    </script>
+</body>
+</html>

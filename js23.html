@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+
+    </script>
+</head>
+
+<body>
+    <button id="jeden">jeden</button><button id="dwa">dwa</button><button id="trzy">trzy</button>
+    <div id="opis"></div>
+    <script>
+
+        const div=document.querySelector('div');
+		const przyciski=document.querySelectorAll('button');
+		for(const przycisk of przyciski) {
+			przycisk.addEventListener("click",function() {
+				alert('Kliknąłeś na przycisk.')
+			});
+		}
+    </script>
+</body>
+</html>

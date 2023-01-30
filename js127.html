@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    </script>
+    <style>
+        h1 {
+            font-size:60px;
+        }
+        h3 {
+            font-size:40px;
+        }
+        h6 {
+            font-size:20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="tytul">Najedź myszką - kręć "kołem" myszki, zmieniaj rozmiar.</h1>
+    <h3 class="tytul">Najedź myszką - kręć "kołem" myszki, zmieniaj rozmiar.</h3>
+    <h6 class="tytul">Najedź myszką - kręć "kołem" myszki, zmieniaj rozmiar.</h6>
+
+    <script>
+        document.querySelector('h1').style.fontSize = '40px';
+        document.querySelector('h3').style.fontSize = '20px';
+        document.querySelector('h6').style.fontSize = '10px';
+
+        const tytuly = document.querySelectorAll('.tytul')
+        let rozmiarCzcionki = 0;
+
+        for(let tytul of tytuly)
+        {
+
+            tytul.addEventListener("wheel",function(event) {
+                pozJed = this.style.fontSize.indexOf("px");
+                rozmiarCzcionki = Number(this.style.fontSize.substr(0,pozJed));
+                console.log(rozmiarCzcionki);
+
+                event.preventDefault();
+
+                if(event.deltaY>0)
+                {
+                    rozmiarCzcionki++;
+
+                    this.style.fontSize = rozmiarCzcionki + 'px';
+                }
+                else
+                {
+                    rozmiarCzcionki--;
+                    this.style.fontSize = rozmiarCzcionki  + 'px'
+                }
+
+            })
+        }
+
+    </script>
+</body>
+</html>

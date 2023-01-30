@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+
+    </script>
+    <style>
+        div {
+            width:300px;
+            height:300px;
+            border:1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <button id="czerwony">czerwone tło</button>
+    <button id="zielony">zielone tło</button>
+    <script>
+
+    const div=document.querySelector('div');
+    const czerwony=document.querySelector('#czerwony');
+    const zielony=document.querySelector('#zielony');
+
+    czerwony.addEventListener('click',function(){ div.style.backgroundColor='red'; });
+    zielony.addEventListener('click',function(){ div.style.backgroundColor='green'; });
+    </script>
+</body>
+</html>

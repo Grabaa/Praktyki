@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+    <div id="spisofert"></div>
+    <script>
+
+        const spisOfert=document.querySelector('#spisofert');
+
+
+        let pb95=4;
+
+        function Oferta (marka, model, cena, spalanie, rocznik) {
+            this.marka = marka;
+            this.model = model;
+            this.cena = cena;
+            this.spalanie = spalanie;
+            this.rocznik = rocznik;
+            this.koszt100km = function() {
+                let koszt = this.spalanie * pb95;
+                return koszt;
+            };
+            this.wiekSamochodu = function() {
+                let data=new Date()
+                let wiek=Number(data.getFullYear())-this.rocznik;
+                if(wiek==1) { wiek=wiek+' rok'; }
+                else if (wiek>1 && wiek <5) { wiek=wiek+' lata'; }
+                else { wiek=wiek+' lat'; }
+                return wiek;
+            }
+
+        }
+
+        const Komis = {
+            Oferta1: new Oferta("Kia","Carens",60000,8,2016),
+            Oferta2: new Oferta("Fiat","Tipo",61000,7,2019),
+            Oferta3: new Oferta("Ford","Focus",10000,7,2018)
+        }
+
+        function wypiszWszystkieOferty(){
+            let listaOfert='';
+            for(idOferty of Object.keys(Komis))
+            {
+                listaOfert+=wypiszOferte(idOferty);
+            }
+            return listaOfert;
+        }
+
+
+        function wypiszOferte(idOferty)
+		{
+            let opisOferty='';
+            opisOferty+='<span class="marka">'+Komis[idOferty].marka+'</span>';
+            opisOferty+='<span class="model">'+Komis[idOferty].model+'</span>';
+            opisOferty+='<span class="cena"> Cena: '+Komis[idOferty].cena+' zł</span>';
+            opisOferty+='<span class="koszt">Koszt 100 km to: '+Komis[idOferty].koszt100km()+' zł </span>';
+            opisOferty+='<span class="wiek">Wiek pojazdu: '+Komis[idOferty].wiekSamochodu()+'</span>';
+            return opisOferty;
+        }
+
+        spisOfert.innerHTML=wypiszWszystkieOferty();
+    </script>
+</body>
+</html>

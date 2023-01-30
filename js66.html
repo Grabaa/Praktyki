@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+
+    </script>
+</head>
+<body>
+    <div id="informacja"></div>
+    <div id="dane"></div>
+    <script>
+
+        const informacja=document.querySelector('#informacja');
+        const dane=document.querySelector('#dane');
+
+		let tekst='JavaScript (w skrócie JS) – język został opracowany przez firmę Netscape w połowie lat 90. Jego twórcę jest Brendan Eich.';
+
+        informacja.innerHTML=tekst;
+
+        tekst=tekst.replace('Netscape','Netscape Communications Corporation');
+
+        dane.innerHTML=tekst;
+
+    </script>
+</body>
+</html>

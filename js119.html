@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    </script>
+    <style>
+        p {
+            display: none;
+            visibility: none;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="przyciski">
+        <button name="przycisk1" value="100">przycisk 1</button>
+        <p>Enim quis maiores magni, ipsa amet doloremque eos eligendi iusto perspiciatis sed? Odio laudantium quia expedita dolorum quos molestias sit? Aspernatur, iusto.</p>
+        <button name="przycisk2" value="200">przycisk 2</button>
+        <p>Expedita ipsam explicabo ad, exercitationem aliquid deleniti omnis, necessitatibus sint perspiciatis deserunt tempore? Dicta eum veritatis nesciunt tempore soluta voluptatum nam beatae!</p>
+        <button name="przycisk3" value="300">przycisk 3</button>
+        <p>Quidem eaque a voluptas quae, neque rem aut quo, cum, dolores inventore dolore veniam iusto omnis facilis non natus ducimus eveniet asperiores.</p>
+        <button name="przycisk4" value="400">przycisk 4</button>
+        <p>Necessitatibus quasi modi accusamus, rerum officiis mollitia ad odit, recusandae iusto veniam minus, labore maiores autem incidunt quas quia. Quae, error doloremque?</p>
+        <button name="przycisk5" value="500">przycisk 5</button>
+        <p>Incidunt consectetur laborum, alias amet facere velit commodi totam eos saepe sunt nihil nisi neque sed iste unde, quas asperiores repellendus ratione!</p>
+    </div>
+    <div id="opis"></div>
+
+    <script>
+        const przyciski = document.querySelector('#przyciski');
+        const opis = document.querySelector('#opis');
+
+
+        przyciski.addEventListener("click",(e) => {
+            opis.innerHTML = e.target.nextElementSibling.innerHTML;
+        })
+    </script>
+</body>
+</html>

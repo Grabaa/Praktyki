@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+
+    </script>
+</head>
+<body>
+    <div id="wynik"></div>
+    <script>
+
+        let pb95=4;
+
+        function Oferta (marka, model, cena, spalanie, rocznik) {
+            this.marka = marka;
+            this.model = model;
+            this.cena = cena;
+            this.spalanie = spalanie;
+            this.rocznik = rocznik;
+            this.koszt100km = function() {
+                let koszt = this.spalanie * pb95;
+                return koszt;
+            };
+            this.wiekSamochodu = function() {
+                let data=new Date()
+                let wiek=Number(data.getFullYear())-this.rocznik;
+                if(wiek==1) { wiek=wiek+' rok'; }
+                else if (wiek>1 && wiek <5) { wiek=wiek+' lata'; }
+                else { wiek=wiek+' lat'; }
+                return wiek;
+            }
+
+        }
+
+        const Oferta1= new Oferta("Kia","Carens",60000,8,2016);
+
+        console.log(Oferta1.marka+' '+Oferta1.model)
+        console.log('Koszt 100 km to: ' +Oferta1.koszt100km()+' zł ');
+        console.log('Wiek pojazdu: ' + Oferta1.wiekSamochodu());
+    </script>
+</body>
+</html>

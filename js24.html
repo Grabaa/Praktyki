@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+
+    </script>
+</head>
+
+<body>
+    <button class="elementy" id="przycisk">Pierwszy element</button>
+    <div class="elementy" id="element_div">Drugi element</div>
+    <span class="elementy" id="element_span">Trzeci element</span>
+    <hr>
+    <div id="opis"></div>
+    <script>
+
+        const opis=document.querySelector('#opis');
+		const elementy=document.querySelectorAll('.elementy');
+		for(const element of elementy) {
+			element.addEventListener("click",function() {
+				opis.innerHTML=this.id;
+			});
+		}
+    </script>
+</body>
+</html>

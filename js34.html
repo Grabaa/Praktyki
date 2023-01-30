@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+
+    </script>
+    <title>Java Script - ćwiczenia</title>
+	<style>
+		div {
+            float: left;
+            margin:5px;
+            width:300px;
+            height:300px;
+            background-color: coral;
+            }
+	</style>
+</head>
+<body>
+    Rozmiar kwadratu: 0<input type="range" id="rozmiar" min="0" max="500" value="300">500 - aktualnie <span id="wielkosc">300px</span>
+    <hr>
+    <div></div>
+
+
+    <script>
+
+
+       const div=document.querySelector('div');
+       const rozmiar=document.querySelector('#rozmiar');
+       const wielkosc=document.querySelector('#wielkosc');
+
+
+       rozmiar.addEventListener('input',function(){
+           div.style.width=rozmiar.value+'px';
+           div.style.height=rozmiar.value+'px';
+
+           wielkosc.innerHTML=rozmiar.value+'px'
+        });
+
+    </script>
+</body>
+</html>

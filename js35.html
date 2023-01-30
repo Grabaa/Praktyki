@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+    <head>
+        <meta charset="UTF-8">
+
+        </script>
+	</head>
+    <body>
+        0 - <input type="range" value="14" min="0" max="250" id="suwak"> - 250<br>
+        Liczba:<span id="liczba">0</span><br>
+        <script>
+
+
+            const liczba=document.querySelector('#liczba');
+            const suwak=document.querySelector('#suwak');
+            suwak.addEventListener("input",function(){
+                liczba.innerHTML=this.value;
+                liczba.style.fontSize=this.value+"px"
+            })
+        </script>
+    </body>
+</html>

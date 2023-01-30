@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+
+    </script>
+</head>
+<body>
+    <div id="wynik"></div>
+    <script>
+
+
+        const wynik=document.querySelector('#wynik');
+
+
+        function sumator(...skladniki) {
+            let liczby='';
+            let suma=0;
+            for(skladnik of skladniki) {
+                liczby+=skladnik+', ';
+                suma+=skladnik;
+                wynik.innerHTML='Suma liczb: '+liczby+' to: '+suma;
+            }
+        }
+
+
+        sumator(2,7,9,11,32);
+    </script>
+</body>
+</html>

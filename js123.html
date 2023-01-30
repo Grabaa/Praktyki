@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    </script>
+    <style>
+        label, input, span {
+            display: block;
+            margin: 6px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="imie">Podaj imię:</label>
+        <input type="text" id="imie" name="imie" data-opis="Wpisz swoje imię, pierwsza litera duża, pozostałe małe.">
+        <span></span>
+
+        <label for="email">Podaj email:</label>
+        <input type="text" id="imie" name="email" data-opis="Podaj swój mail. Sprawdź dokładnie.">
+        <span></span>
+
+        <label for="wiek">Podaj wiek:</label>
+        <input type="number" id="wiek" name="wiek" data-opis="Podaj swój wiek.">
+        <span></span>
+    </form>
+
+    <script>
+        const form = document.querySelector('form');
+        const inputs = document.querySelectorAll('input');
+
+        for (let input of inputs){
+            input.addEventListener("focus",function(){
+                this.nextElementSibling.innerHTML = this.dataset.opis;
+            });
+            input.addEventListener("blur",function(){
+                this.nextElementSibling.innerHTML = "";
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+
+    </script>
+    <style>
+		body  {background-color: black;}
+	</style>
+</head>
+<body>
+	<h1 id="wynik">0</h1>
+    <br>R:<input type="range" value="0"  min="0" max="255" id="r"><br>
+
+
+    <script>
+
+
+		const body=document.querySelector('body');
+		const wynik=document.querySelector('#wynik');
+		const r=document.querySelector('#r');
+
+		let red=0;
+
+		r.addEventListener("input", function(){
+            red=r.value;
+			wynik.innerHTML=red;
+			body.style.backgroundColor='rgb('+red+',0,0)';
+		});
+
+    </script>
+</body>
+</html>

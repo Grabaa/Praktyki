@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+
+    </script>
+</head>
+<body>
+    <div id="informacja"></div>
+    <script>
+
+        const informacja=document.querySelector('#informacja');
+        let promien=Number(prompt("Podaj promień: "));
+        let kod="";
+        do
+        {
+            kod+="Obwód koła = "+2*Math.PI*promien;
+            kod+="<br>Pole koła = "+Math.PI*Math.pow(promien,2);
+            informacja.innerHTML=kod;
+            promien = Number(prompt("Podaj promień: "));
+        } while (promien>0)
+
+    </script>
+</body>
+</html>

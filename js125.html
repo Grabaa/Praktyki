@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+
+    </script>
+    <style>
+	    html, body {
+			width:100%;
+			height:100%;
+			margin:0;
+			padding:0;
+		}
+        div {
+            font-size:40px;
+			background-color: lightgray;
+			width:100%;
+			height:30%;
+			text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+
+    <script>
+
+        window.addEventListener("resize",function() {
+            document.querySelector('div').innerHTML = 'szerokość: ' + window.innerWidth + ' px <br> wysokość: ' + window.innerHeight + ' px';
+        });
+
+
+        document.querySelector('div').innerHTML = 'szerokość: ' + window.innerWidth + ' px <br> wysokość: ' + window.innerHeight + ' px';
+    </script>
+</body>
+</html>
